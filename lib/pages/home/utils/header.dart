@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Header extends StatelessWidget {
+class Header extends PreferredSize {
+  final double height;
+  Header({this.height = kToolbarHeight});
+
+  @override
+  Size get preferredSize => Size.fromHeight(height);
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: height,
+      padding: EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

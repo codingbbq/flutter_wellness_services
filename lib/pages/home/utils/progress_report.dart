@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wellness_services/pages/home/utils/report_details.dart';
 
 class ProgressReport extends StatelessWidget {
   @override
@@ -21,17 +22,10 @@ class ProgressReport extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Container(
-                  margin: EdgeInsets.only(
-                    right: 20.0,
-                  ),
-                  width: 200.0,
-                  height: 250.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Colors.red[300],
-                  ),
-                )
+                ReportDetails(),
+                ReportDetails(),
+                ReportDetails(),
+                ReportDetails(),
               ],
             ),
           )
