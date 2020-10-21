@@ -13,6 +13,7 @@ class WellnessServices extends StatelessWidget {
       title: 'Corporate Wellness Services',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        canvasColor: Colors.transparent,
       ),
       home: WellnessHomePage(),
     );

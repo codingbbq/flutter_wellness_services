@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wellness_services/pages/home/utils/app_navigation.dart';
 import 'package:flutter_wellness_services/pages/home/utils/calendar_header.dart';
 import 'package:flutter_wellness_services/pages/home/utils/calendar_item.dart';
 import 'package:flutter_wellness_services/pages/home/utils/header.dart';
@@ -10,6 +11,7 @@ class WellnessHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: Header(height: 130),
+      bottomSheet: AppNavigation(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
