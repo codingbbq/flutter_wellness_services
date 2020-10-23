@@ -25,72 +25,7 @@ class AppNavigation extends StatelessWidget {
               iconSize: 30.0,
               color: Colors.white,
               onPressed: () {
-                print("pressed");
-                showGeneralDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  barrierLabel: MaterialLocalizations.of(context)
-                      .modalBarrierDismissLabel,
-                  barrierColor: Colors.black45,
-                  transitionDuration: const Duration(milliseconds: 100),
-                  pageBuilder: (BuildContext buildContext, Animation animation,
-                      Animation secondaryAnimation) {
-                    return Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.90,
-                        height: MediaQuery.of(context).size.height * 0.80,
-                        padding: EdgeInsets.all(20),
-                        margin: EdgeInsets.only(
-                          bottom: 20.0,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                            20.0,
-                          ),
-                          color: Colors.white,
-                        ),
-                        child: Column(
-                          children: [
-                            Placeholder(
-                              fallbackHeight: 30,
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Placeholder(
-                              fallbackHeight: 100,
-                              fallbackWidth: 100,
-                            ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-                            Text(
-                              "Oh, you need some rest!",
-                              style: TextStyle(
-                                fontSize: 30.0,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            Row(
-                              children: [
-                                FlatButton(
-                                  onPressed: () {},
-                                  child: Text("No, later"),
-                                ),
-                                FlatButton(
-                                  onPressed: () {},
-                                  child: Text("Yes, thanks"),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                );
+                _showPopupDialog(context);
               },
             ),
             IconButton(
@@ -120,6 +55,20 @@ class AppNavigation extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _showPopupDialog(context) {
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierColor: Colors.black45,
+      transitionDuration: const Duration(milliseconds: 100),
+      pageBuilder: (BuildContext buildContext, Animation animation,
+          Animation secondaryAnimation) {
+        return PopUpDialog();
+      },
     );
   }
 }
