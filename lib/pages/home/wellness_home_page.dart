@@ -18,7 +18,7 @@ class WellnessHomePage extends StatelessWidget {
           padding: EdgeInsets.only(
             left: 20.0,
             right: 20.0,
-            bottom: 20.0,
+            bottom: 100.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -35,13 +35,12 @@ class PopUpDialog extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10.0,
-                ),
                 Container(
                   width: 200,
                   height: 200,
-                  color: Colors.orange,
+                  child: Image.asset(
+                    "assets/images/timeout.png",
+                  ),
                 ),
                 SizedBox(
                   height: 20.0,

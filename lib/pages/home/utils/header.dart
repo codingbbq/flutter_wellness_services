@@ -11,7 +11,7 @@ class Header extends PreferredSize {
   Widget build(BuildContext context) {
     return Container(
       height: height,
-      padding: EdgeInsets.all(20.0),
+      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -25,13 +25,16 @@ class Header extends PreferredSize {
 
           // Profile picture
           Container(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.symmetric(
+              vertical: 5.0,
+              horizontal: 5.0,
+            ),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.grey[300],
             ),
             child: CircleAvatar(
-              backgroundColor: Colors.orange,
+              backgroundImage: AssetImage("assets/images/profile.png"),
               radius: 35.0,
             ),
           )
